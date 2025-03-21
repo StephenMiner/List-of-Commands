@@ -13,4 +13,4 @@ Displays all sub-directories / files in your current directory. If you are seein
 
 ```ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'```
 
-Displays all sub-directories in your current directory. Does not show files.
+Displays all sub-directories in your current directory. Does not show files. Note that the largest gap in this command is 3 spaces. 
