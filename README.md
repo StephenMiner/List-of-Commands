@@ -6,9 +6,10 @@ A list of various shell commands
 Displays all sub-directories / files in your current directory. Excludes file names containin "pyc", "swp", "__init". If the command gives the error "find: -L: unknown primary or operator
 ", try putting formatting the command as ```find -L .``` instead of ```find . -L.```      
 
-```find . | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"```    
+```find . -L | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"```    
 
-Displays all sub-directories / files in your current directory.     
+Displays all sub-directories / files in your current directory. If you are seeing "find: -L: unknown primary or operator
+," use ```find -L .``` instead.    
 
 ```ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'```
 
