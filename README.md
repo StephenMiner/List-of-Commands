@@ -44,3 +44,7 @@ $jsonSchema | Out-File -FilePath 'schema.json'
 Should extract a record and format it. Made for when using powershell.
 
 ========================================================  
+
+```pretty_tree.sh <directory>```    
+
+This script will attempt to display all files and subdirectories inside the provided directory argument using the tree command. If the tree command isn't found, it will perform the function using the first find command contained in this document. It also excludes any files containing "pyc" "swp" "__init." If the original script doesn't work and you see errors relating to the sed command, try out the ```pretty_tree_mac.sh``` script also contained within the repository.
