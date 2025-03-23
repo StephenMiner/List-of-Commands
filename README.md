@@ -48,6 +48,18 @@ Should extract a record and format it. Made for when using powershell.
 
 ========================================================  
 
+
+# A List of Scripts
+List of various shell scripts    
+========================================================    
+
 ```pretty_tree.sh <directory>```    
 
-This script will attempt to display all files and subdirectories inside the provided directory argument using the tree command. If the tree command isn't found, it will perform the function using the first find command contained in this document. It also excludes any files containing "pyc" "swp" "__init." If the original script doesn't work and you see errors relating to the sed command, try out the ```pretty_tree_mac.sh``` script also contained within the repository.
+This script will attempt to display all files and subdirectories inside the provided directory argument using the tree command. If the tree command isn't found, it will perform the function using the first find command contained in this document. It also excludes any files containing "pyc" "swp" "__init." If the original script doesn't work and you see errors relating to the sed command, try out the ```pretty_tree_mac.sh``` script also contained within the repository.    
+
+========================================================    
+
+```Lrsearch.sh -file <file-pattern> -f <directory> -o <file|content> search_term1 search_term2 searchterm3 ... search_termN ```    
+
+This script will search the specified directory for files whose name match the specified file pattern (ex. ```-file "*.py"``` will search all .py files). Files will then be filtered based on if they have content contained in the whitelist constructed from the specified search terms. You need at least one search time. The script will output to the console all file names that match these parameters if ```-o file``` is used and the previous and next 5 lines from the matched line if ```-o content``` is used.  
+
