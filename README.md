@@ -27,8 +27,11 @@ The ```-L``` flag will make it so that if the find command comes across a symbol
 
 Displays all sub-directories in your current directory. Does not show files. Note that the largest gap in this command is 3 spaces.    
 
-========================================================  
+========================================================    
+```find -L . -name "*.py" -print | xargs -I {} grep -Hil "term1" {} | xargs -I {} grep -Hil "term2" {}```     
+Searches all python scripts within the current directory, filtering for files whose content contains both term1 and term2.
 
+========================================================    
 ```
 $jsonLines = Get-Content -Path 'test.jsonl' -ErrorAction Stop
 
