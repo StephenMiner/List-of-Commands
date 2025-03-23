@@ -29,7 +29,7 @@ Displays all sub-directories in your current directory. Does not show files. Not
 
 ========================================================    
 ```find -L . -name "*.py" -print | xargs -I {} grep -Hil "term1" {} | xargs -I {} grep -Hil "term2" {}```     
-Searches all python scripts within the current directory, filtering for files whose content contains both term1 and term2.
+Displays all python scripts within the current directory, including only those files whose content contains both term1 and term2.
 
 ========================================================    
 ```
